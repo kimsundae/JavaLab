@@ -1,4 +1,4 @@
-package stream.filter;
+package stream;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

@@ -1,11 +1,11 @@
-package stream.filter;
+package stream;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
 // 스트림 만들기 818
-public class FilterPractice_2 {
+public class StreamPractice_02 {
     public static void main(String[] args) {
         // 컬렉션
         List<Integer> list = Arrays.asList(1,2,3,4,5); // 가변인자
