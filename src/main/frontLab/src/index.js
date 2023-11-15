@@ -4,10 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import SetState_01 from "./component/SetState_01";
+import NivoGraphTest from './component/NivoGraphTest'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <>
-    <SetState_01 />
+    <NivoGraphTest />
   </>
 );
 
