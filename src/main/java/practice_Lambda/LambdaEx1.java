@@ -1,9 +1,10 @@
 package practice_Lambda;
 
-@FunctionalInterface
+/*@FunctionalInterface
 interface MyFunction{
     void run();
-}
+}*/
+/*
 public class LambdaEx1 {
     static void execute(MyFunction f){
         f.run();
@@ -32,3 +33,4 @@ public class LambdaEx1 {
         execute( () -> System.out.println("run()"));
     }
 }
+*/
