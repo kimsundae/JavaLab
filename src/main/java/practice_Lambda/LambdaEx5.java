@@ -19,10 +19,15 @@ public class LambdaEx5 {
         System.out.println(list);
         printEvenNum(p, c, list);
         List<Integer> newList = doSomething(f, list);
-
+        System.out.println(newList);
     }
     static <T> List<T> doSomething(Function<T,T> f, List<T> list){
+        List<T> newList = new ArrayList<T>(list.size());
 
+        for(T i : list){
+            newList.add(f.apply(i));
+        }
+        return newList;
     }
     static <T> void printEvenNum(Predicate<T> p , Consumer<T> c , List<T> list){
         System.out.print("[");
