@@ -5,6 +5,23 @@ public class ThreadEx20 {
         ThreadEx20_1 gc = new ThreadEx20_1();
         gc.setDaemon(true);
         gc.start();
+
+        int requiredMemory = 0;
+
+        for(int i = 0; i < 20; i++){
+            requiredMemory = (int)(Math.random() * 10) * 20;
+
+            // 필요한 메모리가 사용할 수 있는 양보다 크거나 전체 메모리의 60% 이상을
+            // 사용했을 경우 gc를 깨운다.
+            if(gc.freeMemory() < requiredMemory
+                    || gc.freeMemory() < gc.totalMemory() * 0.4)
+                gc.interrupt();
+            try{
+                gc.join(100);
+            } catch(InterruptedException e){}
+            gc.usedMemory += requiredMemory;
+            System.out.println("usedMemory:" + gc.usedMemory);
+        }
     }
 
 
